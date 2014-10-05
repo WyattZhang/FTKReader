@@ -14,6 +14,9 @@
 		102BFCE419DFAA550047AFB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102BFCE319DFAA550047AFB6 /* Images.xcassets */; };
 		102BFCE719DFAA550047AFB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102BFCE519DFAA550047AFB6 /* LaunchScreen.xib */; };
 		102BFCF319DFAA550047AFB6 /* flytokiwiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 102BFCF219DFAA550047AFB6 /* flytokiwiTests.m */; };
+		108AC4B919E14F16005142ED /* FTKDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 108AC4B819E14F16005142ED /* FTKDataManager.m */; };
+		108AC4BC19E17DFF005142ED /* FTKPostListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108AC4BB19E17DFF005142ED /* FTKPostListTableViewController.m */; };
+		108AC4BF19E18704005142ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 108AC4BE19E18704005142ED /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		102BFCEC19DFAA550047AFB6 /* flytokiwiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flytokiwiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102BFCF119DFAA550047AFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102BFCF219DFAA550047AFB6 /* flytokiwiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flytokiwiTests.m; sourceTree = "<group>"; };
+		108AC4B719E14F16005142ED /* FTKDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKDataManager.h; sourceTree = "<group>"; };
+		108AC4B819E14F16005142ED /* FTKDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTKDataManager.m; sourceTree = "<group>"; };
+		108AC4BA19E17DFF005142ED /* FTKPostListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKPostListTableViewController.h; sourceTree = "<group>"; };
+		108AC4BB19E17DFF005142ED /* FTKPostListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTKPostListTableViewController.m; sourceTree = "<group>"; };
+		108AC4BE19E18704005142ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,9 @@
 		102BFCD519DFAA550047AFB6 /* flytokiwi */ = {
 			isa = PBXGroup;
 			children = (
+				108AC4BD19E186DC005142ED /* Resources */,
+				108AC4B519E14EA6005142ED /* Controllers */,
+				108AC4B619E14EA6005142ED /* Models */,
 				102BFCDA19DFAA550047AFB6 /* AppDelegate.h */,
 				102BFCDB19DFAA550047AFB6 /* AppDelegate.m */,
 				102BFCDD19DFAA550047AFB6 /* ViewController.h */,
@@ -117,6 +128,32 @@
 				102BFCF119DFAA550047AFB6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		108AC4B519E14EA6005142ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				108AC4BA19E17DFF005142ED /* FTKPostListTableViewController.h */,
+				108AC4BB19E17DFF005142ED /* FTKPostListTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		108AC4B619E14EA6005142ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				108AC4B719E14F16005142ED /* FTKDataManager.h */,
+				108AC4B819E14F16005142ED /* FTKDataManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		108AC4BD19E186DC005142ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				108AC4BE19E18704005142ED /* Default-568h@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				102BFCE219DFAA550047AFB6 /* Main.storyboard in Resources */,
+				108AC4BF19E18704005142ED /* Default-568h@2x.png in Resources */,
 				102BFCE719DFAA550047AFB6 /* LaunchScreen.xib in Resources */,
 				102BFCE419DFAA550047AFB6 /* Images.xcassets in Resources */,
 			);
@@ -220,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				102BFCDF19DFAA550047AFB6 /* ViewController.m in Sources */,
+				108AC4B919E14F16005142ED /* FTKDataManager.m in Sources */,
 				102BFCDC19DFAA550047AFB6 /* AppDelegate.m in Sources */,
 				102BFCD919DFAA550047AFB6 /* main.m in Sources */,
+				108AC4BC19E17DFF005142ED /* FTKPostListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,9 +385,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flytokiwi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,9 +398,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = flytokiwi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -414,6 +460,7 @@
 				102BFCF819DFAA550047AFB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		102BFCF919DFAA550047AFB6 /* Build configuration list for PBXNativeTarget "flytokiwiTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +469,7 @@
 				102BFCFB19DFAA550047AFB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

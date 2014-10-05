@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FTKDataManager.h"
+#import "FTKPostListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    FTKPostListTableViewController *postListVC = [[FTKPostListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:postListVC];
+
+    self.window.rootViewController = nav;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
