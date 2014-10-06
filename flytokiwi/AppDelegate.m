@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FTKDataManager.h"
 #import "FTKPostListTableViewController.h"
+#import "FTKPostDetailViewController.h"
 
 @interface AppDelegate ()
 

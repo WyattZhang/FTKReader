@@ -18,6 +18,7 @@
 		108AC4BC19E17DFF005142ED /* FTKPostListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108AC4BB19E17DFF005142ED /* FTKPostListTableViewController.m */; };
 		108AC4BF19E18704005142ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 108AC4BE19E18704005142ED /* Default-568h@2x.png */; };
 		108AC4C219E23BBF005142ED /* FTKModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 108AC4C119E23BBF005142ED /* FTKModels.m */; };
+		108AC4C519E24CFA005142ED /* FTKPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108AC4C419E24CFA005142ED /* FTKPostDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		108AC4BE19E18704005142ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		108AC4C019E23BBF005142ED /* FTKModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKModels.h; sourceTree = "<group>"; };
 		108AC4C119E23BBF005142ED /* FTKModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTKModels.m; sourceTree = "<group>"; };
+		108AC4C319E24CFA005142ED /* FTKPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKPostDetailViewController.h; sourceTree = "<group>"; };
+		108AC4C419E24CFA005142ED /* FTKPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTKPostDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 			children = (
 				108AC4BA19E17DFF005142ED /* FTKPostListTableViewController.h */,
 				108AC4BB19E17DFF005142ED /* FTKPostListTableViewController.m */,
+				108AC4C319E24CFA005142ED /* FTKPostDetailViewController.h */,
+				108AC4C419E24CFA005142ED /* FTKPostDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				108AC4B919E14F16005142ED /* FTKDataManager.m in Sources */,
 				102BFCDC19DFAA550047AFB6 /* AppDelegate.m in Sources */,
 				102BFCD919DFAA550047AFB6 /* main.m in Sources */,
+				108AC4C519E24CFA005142ED /* FTKPostDetailViewController.m in Sources */,
 				108AC4BC19E17DFF005142ED /* FTKPostListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

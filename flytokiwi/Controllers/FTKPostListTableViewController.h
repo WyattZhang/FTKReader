@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class FTKPostDetailViewController;
+
 @interface FTKPostListTableViewController : UITableViewController
 
 @end

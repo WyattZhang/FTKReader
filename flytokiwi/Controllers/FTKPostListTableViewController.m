@@ -8,6 +8,7 @@
 
 #import "FTKPostListTableViewController.h"
 #import "FTKDataManager.h"
+#import "FTKPostDetailViewController.h"
 
 @interface FTKPostListTableViewController () <NSURLSessionDataDelegate>
 {
@@ -26,7 +27,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.navigationItem.title = @"文章列表";
         self.posts = [NSArray array];
     }
     return self;
@@ -44,12 +44,16 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"文章列表";
+}
+
+// refactor:需要解耦至Models，待修改
 - (void)fetchData
 {
     __block NSArray *jsonObject;
-    //    NSString *requestSting = @"http://flytokiwi.com/blog/wp-json/posts";
     NSString *requestSting = @"http://flytokiwi.com/blog/wp-json/posts";
-    
     NSURL *url = [NSURL URLWithString:requestSting];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -107,13 +111,23 @@
     
     NSDictionary *post = self.posts[indexPath.row];
     cell.textLabel.text = post[@"title"];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:17];
     cell.textLabel.numberOfLines = 0;
-    
     cell.detailTextLabel.text = post[@"excerpt"];
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.textColor = [UIColor grayColor];
     NSLog(@"%@",post[@"excerpt"]);
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *post = self.posts[indexPath.row];
+    FTKPostDetailViewController *postDetailVC = [[FTKPostDetailViewController alloc] init];
+//    postDetailVC.postContent = post[@"content"];
+    postDetailVC.postURL = [NSURL URLWithString:post[@"link"]];
+    postDetailVC.navigationItem.title = post[@"title"];
+    self.navigationItem.title = @"";
+    [self.navigationController pushViewController:postDetailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
