@@ -28,6 +28,7 @@
     self = [super initWithStyle:style];
     if (self) {
         self.posts = [NSArray array];
+        self.navigationItem.title = @"文章列表";
     }
     return self;
 }
@@ -42,11 +43,6 @@
     [self.tableView addSubview:refreshControl];
     [self fetchData];
     
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationItem.title = @"文章列表";
 }
 
 // refactor:需要解耦至Models，待修改
@@ -124,9 +120,9 @@
     NSDictionary *post = self.posts[indexPath.row];
     FTKPostDetailViewController *postDetailVC = [[FTKPostDetailViewController alloc] init];
 //    postDetailVC.postContent = post[@"content"];
-    postDetailVC.postURL = [NSURL URLWithString:post[@"link"]];
+//    postDetailVC.postURL = [NSURL URLWithString:post[@"link"]];
+    postDetailVC.postURL = [NSURL URLWithString:@"http://bbs.jjwxc.net/showmsg.php?board=20&boardpagemsg=1&id=233263"];
     postDetailVC.navigationItem.title = post[@"title"];
-    self.navigationItem.title = @"";
     [self.navigationController pushViewController:postDetailVC animated:YES];
 }
 

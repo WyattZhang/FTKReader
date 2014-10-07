@@ -19,8 +19,9 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        NSLog(@"init nib called");
 //        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"收藏" style:UIBarButtonItemStylePlain target:self action:nil];
-        self.navigationItem.rightBarButtonItem = bbi;
+//        self.navigationItem.rightBarButtonItem = bbi;
     }
     return self;
 }
